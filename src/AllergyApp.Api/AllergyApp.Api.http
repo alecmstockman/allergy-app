@@ -1,0 +1,11 @@
+@AllergyApp.Api_HostAddress = http://localhost:5232
+
+GET {{AllergyApp.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{AllergyApp.Api_HostAddress}}/api/meals
+Accept: application/json
+
+###
