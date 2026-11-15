@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AllergyApp.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5a3308df1ffc5730a11c4c6dec027987971772e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+305fc55590bf005fe28c043990ad8c637eb6e7c4")]
 [assembly: System.Reflection.AssemblyProductAttribute("AllergyApp.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AllergyApp.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
