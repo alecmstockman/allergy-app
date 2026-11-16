@@ -6,6 +6,14 @@
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
+- [Node.js](https://nodejs.org/) 22.12 or newer
+
+If you use `nvm`, select the repository's Node version with:
+
+```bash
+nvm install
+nvm use
+```
 
 ### 1. Start PostgreSQL
 
@@ -51,6 +59,26 @@ This creates the local database schema from the migrations in
 
 ```bash
 dotnet run --project src/AllergyApp.Api
+```
+
+### 6. Install and start the frontend
+
+Install the frontend dependencies:
+
+```bash
+npm --prefix src/allergy-app-web install
+```
+
+In a separate terminal, start the Vite development server:
+
+```bash
+npm --prefix src/allergy-app-web run dev
+```
+
+To create a production build:
+
+```bash
+npm --prefix src/allergy-app-web run build
 ```
 
 ## Working with migrations

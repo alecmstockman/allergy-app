@@ -19,6 +19,8 @@ export default function App() {
             autoComplete="off"
           />
         </section>
+
+        <button className="menu-entry-submit">Submit</button>
       </main>
 
       <nav className="navigation-bar">
