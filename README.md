@@ -1,5 +1,21 @@
 # Allergy App
 
+## Core Features
+
+### Menu Filtering:
+- Take a photo of any app, check against your list of food allergies/ intolerances/ preferences and filter the list to remove any items you cannot eat
+- Translate any unclear names/words into easily identifiable ingredients with AI
+- Use AI api call to present a list to the user of “safe” to eat menu items, slight modification required, and a list of potential questions for the server. 
+- These can be saved for future reference
+
+### Food/Symptom Tracking:
+- Use camera, text, or voice entry to log food items and save to calendar. AI takes entry and formats
+- Use text or voice entry to track symptoms
+- Analyze the data to look for trends to identify potential allergies or food intolerances using AI
+
+
+<img width="433" height="824" alt="Screenshot 2026-11-16 at 1 42 05 PM" src="https://github.com/user-attachments/assets/4c9e11eb-7ba0-43cd-8ac9-ca38c69962c4" />
+
 ## Local setup
 
 ### Prerequisites
