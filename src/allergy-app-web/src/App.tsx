@@ -3,18 +3,19 @@ import "./App.css";
 export default function App() {
   return (
     <div className="app-shell">
+
       <header className="app-header">
-        <h1>Allergy Menu Filter</h1>
+        <h1>Menu Scanner</h1>
       </header>
 
       <main className="app-content">
         <section className="menu-entry-card">
           <label htmlFor="menu-item">Enter a menu item here:</label>
-          <input
+          <textarea
             id="menu-item"
             name="menuItem"
-            type="text"
             placeholder="e.g., Chicken pesto pasta"
+            rows={3}
             autoComplete="off"
           />
         </section>
@@ -22,7 +23,7 @@ export default function App() {
 
       <nav className="navigation-bar">
 
-        <button className="icon-button" type="button" aria-label="Menu">
+        <button className="icon-button" type="button" aria-label="Home">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -41,7 +42,7 @@ export default function App() {
           </svg>
         </button>
 
-        <button className="icon-button" type="button" aria-label="User profile">
+        <button className="icon-button" type="button" aria-label="Calendar">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -61,7 +62,11 @@ export default function App() {
           </svg>          
         </button>
 
-        <button className="icon-button" type="button" aria-label="Menu">
+        <button 
+          className="icon-button"
+          type="button"
+          aria-label="Allergy Menu Filter"
+          aria-current="page">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -82,7 +87,7 @@ export default function App() {
           </svg>
         </button>
 
-        <button className="icon-button" type="button" aria-label="Menu">
+        <button className="icon-button" type="button" aria-label="User profile">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

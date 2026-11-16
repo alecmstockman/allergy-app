@@ -1,138 +1,155 @@
 :root {
-  background: #000;
+  --cream: #faf0df;
+    --white: #fff;
+  --espresso: #30241f;
+  --terracotta: #a04733;
+  --terracotta-light: #f3d8cd;
+  --border: #ded4cb;
+  --input-border: #b2a39a;
+  --placeholder: #70625b;
+  --nav-clearance: calc(6rem + env(safe-area-inset-bottom, 0px));
+
+  color-scheme: light;
+  font-family: system-ui, sans-serif;
+  background: #eee8e1;
+  color: var(--espresso);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
 
 .app-shell {
   width: 100%;
   max-width: 430px;
   min-height: 100svh;
-
-  margin: 0 auto;
-  background: #FAF7F2;
+  margin-inline: auto;
+  background: var(--cream);
 }
 
 .app-header {
-  padding: calc(1.25rem + env(safe-area-inset-top)) 1.25rem 1.25rem;
-  color: #30241F;
-  background: #FAF7F2;
-
-  box-shadow: 0 2px 8px rgb(24 65 57 / 12%);
-  border-bottom: 2px solid #A04733;
+  padding: calc(1.25rem + env(safe-area-inset-top, 0px)) 1.5rem 1.25rem;
+  border-bottom: 2px solid var(--terracotta);
 }
 
 .app-header h1 {
   margin: 0;
-  font-size: clamp(1.5rem, 7vw, 1.875rem);
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  color: var(--espresso);
+  font-size: clamp(1.5rem, 6.5vw, 2rem);
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
 }
 
 .app-content {
-  width: 100%;
-  padding: 1.25rem 1rem;
+  padding: 1.25rem 1rem var(--nav-clearance);
 }
 
 .menu-entry-card {
-  width: 100%;
-  padding: 1.25rem;
-  background: #ffffff;
-  border: 1px solid #dce7e4;
+  padding: 1rem;
+  background: var(--white);
   border-radius: 0.875rem;
-  box-shadow: 0 8px 24px rgb(24 65 57 / 8%);
+  box-shadow: 0 4px 14px rgb(48 36 31 / 8%);
 }
 
 .menu-entry-card label {
   display: block;
   margin-bottom: 0.625rem;
-  color: #173a33;
   font-size: 1rem;
-  font-weight: 650;
+  font-weight: 700;
   line-height: 1.4;
 }
 
-.menu-entry-card input {
+.menu-entry-card textarea {
   display: block;
   width: 100%;
-  min-height: 3rem;
+  min-height: 6rem;
   padding: 0.75rem 0.875rem;
+
   color: #173a33;
   font: inherit;
   font-size: 1rem;
-  background: #FAF7F2;
+  line-height: 1.5;
+  
+  background: #fff;
   border: 1px solid #9db6b0;
   border-radius: 0.625rem;
-  transition:
-    border-color 150ms ease,
-    box-shadow 150ms ease;
+  resize: vertical;
+  overflow-wrap: anywhere;
 }
 
-.menu-entry-card input::placeholder {
+.menu-entry-card textarea::placeholder {
   color: #71847f;
 }
 
-.menu-entry-card input:focus {
+.menu-entry-card textarea:focus {
   border-color: #176b5b;
   outline: none;
   box-shadow: 0 0 0 3px rgb(23 107 91 / 18%);
 }
 
-@media (min-width: 431px) {
-  .app-shell {
-    border-right: 1px solid #dce7e4;
-    border-left: 1px solid #dce7e4;
-  }
-}
-
 .navigation-bar {
   position: fixed;
-  bottom: 16px;
-
-  left: 50%;
   z-index: 10;
+  bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  left: 50%;
+  transform: translateX(-50%);
 
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.25rem;
 
-  width: min(90%, 400px);
-  height: 80px;
-
-  padding: 0.5rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
-  background: #f9f9f9;
-
-  border-radius: 12px;
-  transform: translateX(-50%);
-}
-
-.bottom-nav button {
-  flex: 1;
-}
-
-.app-content {
-  padding-bottom: 6rem;
+  width: min(calc(100% - 2rem), 398px);
+  padding: 0.375rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--white);
+  box-shadow: 0 4px 14px rgb(48 36 31 / 10%);
 }
 
 .icon-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 56px;
-  height: 56px;
-
+  display: grid;
+  min-width: 0;
+  min-height: 3rem;
+  place-items: center;
   padding: 0;
-  color: #e6e6e6;
-  background: #000000;
-
-  border: 2px solid  #71847f;
-  border-radius: 0.625rem;
+  border: 0;
+  border-radius: 0.75rem;
+  background: transparent;
+  color: var(--espresso);
   cursor: pointer;
 }
 
 .icon-button:hover {
-  background: #eef4f2;
+  background: var(--cream);
+}
+
+.icon-button[aria-current="page"] {
+  background: var(--terracotta-light);
+  color: var(--terracotta);
 }
 
 .icon-button:focus-visible {
-  outline: 3px solid rgb(23 107 91 / 30%);
+  outline: 2px solid var(--terracotta);
   outline-offset: 2px;
+}
+
+.preview-icon {
+  width: 28px;
+  height: 28px;
 }
