@@ -8,14 +8,16 @@
   min-height: 100svh;
 
   margin: 0 auto;
-  background: #93e396;
+  background: #FAF7F2;
 }
 
 .app-header {
   padding: calc(1.25rem + env(safe-area-inset-top)) 1.25rem 1.25rem;
-  color: #ffffff;
-  background: #176b5b;
+  color: #30241F;
+  background: #FAF7F2;
+
   box-shadow: 0 2px 8px rgb(24 65 57 / 12%);
+  border-bottom: 2px solid #A04733;
 }
 
 .app-header h1 {
@@ -56,7 +58,7 @@
   color: #173a33;
   font: inherit;
   font-size: 1rem;
-  background: #ffffff;
+  background: #FAF7F2;
   border: 1px solid #9db6b0;
   border-radius: 0.625rem;
   transition:
@@ -88,20 +90,16 @@
   left: 50%;
   z-index: 10;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 
-  width: min(80%, 398px);
+  width: min(90%, 400px);
   height: 80px;
 
-  gap: 1rem;
-
   padding: 0.5rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
-  background: #000000;
+  background: #f9f9f9;
 
   border-radius: 12px;
-  border-top: 1px solid #434343;
   transform: translateX(-50%);
 }
 
