@@ -1,5 +1,7 @@
 # Allergy App
 
+This app is in the early stages of development and is not currently functional
+
 ## Core Features
 
 ### Menu Filtering:
