@@ -37,9 +37,12 @@ body {
 .app-shell {
   display: flex;
   flex-direction: column;
+
   width: 100%;
   max-width: 430px;
-  min-height: 100svh;
+  height: 100svh;
+
+  overflow: hidden;
   margin-inline: auto;
   background: var(--cream);
 }
@@ -61,13 +64,22 @@ body {
 .app-content {
   display: flex;
   flex: 1;
+  min-height: 0;
   flex-direction: column;
+
   gap: 1rem;
   padding: 1.25rem 1rem var(--nav-clearance);
+  overflow: hidden;
 }
 
 .menu-entry-card {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100% - 56px - 1rem);
+
   padding: 1rem;
+  overflow: hidden;
+
   background: var(--white);
   border-radius: 0.875rem;
   box-shadow: 0 4px 14px rgb(48 36 31 / 8%);
@@ -85,6 +97,8 @@ body {
   display: block;
   width: 100%;
   min-height: 6rem;
+  max-height: 100%;
+  field-sizing: content;
   padding: 0.75rem 0.875rem;
 
   color: #173a33;
@@ -96,6 +110,7 @@ body {
   border: 1px solid #9db6b0;
   border-radius: 0.625rem;
   resize: vertical;
+  overflow-y: auto;
   overflow-wrap: anywhere;
 }
 
@@ -109,8 +124,8 @@ body {
   box-shadow: 0 0 0 3px rgb(23 107 91 / 18%);
 }
 
-
 .menu-entry-submit {
+  flex: 0 0 56px;
   width: 100%;
   height: 56px;
   margin-top: auto;
@@ -119,7 +134,7 @@ body {
 
   font-size: 28px;
   font-weight: 600;
-  color: var(--cream);
+  color: var(--white);
   background: var(--terracotta);
 }
 
