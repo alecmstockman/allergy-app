@@ -82,7 +82,11 @@ body {
 
   background: var(--white);
   border-radius: 0.875rem;
-  box-shadow: 0 4px 14px rgb(48 36 31 / 8%);
+
+  border: 1px solid var(--border);
+  box-shadow: 
+    0 2px 4px rgb(48 36 31 / 6%),
+    0 8px 20px rgb(48 36 31 / 10%);
 }
 
 .menu-entry-label-row {
