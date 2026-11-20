@@ -1,7 +1,14 @@
 export default function ProfilePage() {
   return (
-    <main className="app-content">
-      <h1>Profile</h1>
-    </main>
+    <>
+      <header className="app-header">
+        <h1>Profile</h1>
+      </header>
+
+      <main className="app-content">
+
+      </main>
+
+    </>
   );
 }

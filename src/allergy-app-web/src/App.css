@@ -92,7 +92,7 @@ body {
   gap: 0.75rem;
   margin-bottom: 0.625rem;
 
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.4;
 }
@@ -115,7 +115,7 @@ body {
 
   color: #173a33;
   font: inherit;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5;
 
   background: #fff;
