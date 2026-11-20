@@ -1,62 +1,25 @@
+import { Navigate, Route, Routes } from "react-router-dom";
+import NavigationBar from "./components/NavigationBar";
+import CalendarPage from "./pages/CalendarPage";
+import HomePage from "./pages/HomePage";
+import OptionsPage from "./pages/OptionsPage";
+import ProfilePage from "./pages/ProfilePage";
+import ScannerPage from "./pages/ScannerPage";
 import "./App.css";
-import HomeIcon from "./assets/HomeIcon";
-import ProfileIcon from "./assets/ProfileIcon";
-import MenuIcon from "./assets/MenuIcon";
-import CalendarIcon from "./assets/CalendarIcon";
-import OptionsIcon from "./assets/OptionsIcon";
-import CameraIcon from "./assets/CameraIcon";
 
 export default function App() {
   return (
     <div className="app-shell">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/options" element={<OptionsPage />} />
+        <Route path="/calendar" element={<CalendarPage />} />
+        <Route path="/scanner" element={<ScannerPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
 
-      <header className="app-header">
-        <h1>Menu Scanner</h1>
-      </header>
-
-      <main className="app-content">
-        <section className="menu-entry-card">
-          <div className="menu-entry-label-row">
-            <label htmlFor="menu-item">Enter a menu item here:</label>
-            <CameraIcon />
-          </div>
-          
-          <textarea
-            id="menu-item"
-            name="menuItem"
-            placeholder="e.g., Chicken pesto pasta"
-            rows={3}
-            autoComplete="off"
-          />
-        </section>
-
-        <button className="menu-entry-submit">Submit</button>
-      </main>
-
-      <nav className="navigation-bar">
-
-        <a className="icon-button" type="button" aria-label="Home">
-          <HomeIcon />
-        </a>
-
-        <a className="icon-button" type="button" aria-label="Menu">
-          <OptionsIcon />
-        </a>
-
-        <a className="icon-button"type="button"aria-label="Allergy Menu Filter">
-          <CalendarIcon />
-        </a>
-
-        <a className="icon-button" type="button" aria-label="Menu Scanner" aria-current="page">
-          <MenuIcon />
-        </a>
-
-        <a className="icon-button" type="button" aria-label="User profile">
-          <ProfileIcon />
-        </a>
-
-      </nav>
-
+      <NavigationBar />
     </div>
   );
 }
