@@ -4,6 +4,7 @@ import ProfileIcon from "./assets/ProfileIcon";
 import MenuIcon from "./assets/MenuIcon";
 import CalendarIcon from "./assets/CalendarIcon";
 import OptionsIcon from "./assets/OptionsIcon";
+import CameraIcon from "./assets/CameraIcon";
 
 export default function App() {
   return (
@@ -15,7 +16,11 @@ export default function App() {
 
       <main className="app-content">
         <section className="menu-entry-card">
-          <label htmlFor="menu-item">Enter a menu item here:</label>
+          <div className="menu-entry-label-row">
+            <label htmlFor="menu-item">Enter a menu item here:</label>
+            <CameraIcon />
+          </div>
+          
           <textarea
             id="menu-item"
             name="menuItem"
